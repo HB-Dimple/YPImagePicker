@@ -40,7 +40,9 @@ extension PHCachingImageManager {
                 if let imageRef = image.cgImage?.cropping(to: scaledCropRect) {
                     let croppedImage = UIImage(cgImage: imageRef)
                     let exifs = self.metadataForImageData(data: data)
-                    callback(croppedImage, exifs)
+                   // callback(croppedImage, exifs)
+                    //Change By dimple
+                    callback(image, exifs)
                 }
             }
         }
